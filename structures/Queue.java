@@ -3,6 +3,11 @@ package structures;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
+/*
+* Here, Queue is implemented using an ArrayList.
+* The downside? For every dequeue, we shift the remaining elements left by 1.
+* Hence a dequeue takes O(n) time.
+*/
 public class Queue<T>{
     // This is an arrayList implementation of a queue.
     // One could use a rear LL implementation instead.
@@ -37,6 +42,6 @@ public class Queue<T>{
     }
 
     public int size(){
-        return size;
+        return queue.size();
     }
 }
